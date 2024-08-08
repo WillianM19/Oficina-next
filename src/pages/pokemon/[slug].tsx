@@ -22,8 +22,8 @@ interface PokemonPage {
 export default function PokemonPage({ pokemon, slug }: PokemonPage) {
   return (
     <main
-      style={{ background: `linear-gradient(to right, ${pokemon?.color}, ${pokemon?.color})` }}
-      className="h-[100vh] flex flex-col p-[70px] pb-[0]"
+      className="bg-gradient-to-r from-red-500 to-red-600 h-[100vh] flex flex-col p-[70px] pb-[0]"
+      style={{ background: pokemon?.color}}
     >
       <a href="/" className="flex items-center gap-4 drop-shadow-lg">
         <Image src={Logo} width={60} height={60} alt="logo" />
@@ -32,8 +32,8 @@ export default function PokemonPage({ pokemon, slug }: PokemonPage) {
 
       {pokemon ? (
         <div className="bg-white w-full h-full mt-[100px] flex justify-center items-center gap-[150px]">
-          <div className="w-[499px] h-[549px] relative border border-stone-400 rounded-lg">
-            <Image src={pokemon.sprite} layout="fill" objectFit="contain" alt="" />
+          <div className="w-[499px] h-[549px] relative border border-stone-400 rounded-lg flex items-center justify-center">
+            <Image src={pokemon.sprite} width={300} height={300} objectFit="contain" alt="" />
           </div>
           <div>
             <h2 className="text-[31px] font-bold uppercase">{pokemon.name}</h2>
