@@ -53,14 +53,14 @@ export default function PokemonPage({ pokemon, slug }: PokemonPage) {
                   <Image src={IconWeight} alt="" />
                   <p>PESO</p>
                 </div>
-                <p>{pokemon.weight}</p>
+                <p>{pokemon.weight / 10} kg</p>
               </div>
               <div className="px-[10px] h-[127px] border border-stone-400 flex flex-col items-center justify-center text-[31px] rounded-lg">
                 <div className="flex gap-2">
                   <Image src={IconSize} alt="" />
                   <p>TAMANHO</p>
                 </div>
-                <p>{pokemon.height}</p>
+                <p>{pokemon.height / 10} m</p>
               </div>
             </div>
             <p className="mt-[51px] text-[31px] font-light">
