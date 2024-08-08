@@ -33,7 +33,7 @@ export default function PokemonPage({ pokemon, slug }: PokemonPage) {
       {pokemon ? (
         <div className="bg-white w-full h-full mt-[100px] flex justify-center items-center gap-[150px]">
           <div className="w-[499px] h-[549px] relative border border-stone-400 rounded-lg">
-            <Image src={pokemon.sprite} layout="fill" alt="" />
+            <Image src={pokemon.sprite} layout="fill" objectFit="contain" alt="" />
           </div>
           <div>
             <h2 className="text-[31px] font-bold uppercase">{pokemon.name}</h2>
@@ -111,7 +111,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
           weight,
           height,
           locations: locations || [],
-          sprite: sprites.front_default,
+          sprite: sprites.other.showdown.front_default,
           color,
         },
         slug,
